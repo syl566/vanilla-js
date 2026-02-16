@@ -10,62 +10,44 @@
 </head>
 
 <body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="formulaire .html">Contact</a>
+        </div>
+    </div>
+
     <nav class="navbar">
-        <a href="formulaire.html">Contact</a>
         <div class="info">
             <label for="site-search">recherche sur le site</label>
             <input type="search" id="site-search" name="q" />
             <button>recherche</button>
         </div>
-
     </nav>
-    
+
     <h1>la pause photo</h1>
-    <h3>prenez une pause</h3>
+    <h2>prenez une pause</h2>
     <p>Les photographes aiment figer le temps, un portrait,
         leurs souvenirs, les paysages, les émotions.
         Leurs photos subliment la réalité ou l'amour, surtout quand le cliché est en noir et blanc.</p>
-       
-        <div id="feed-container"></div>
-        
 
-   <!---- <div id ="element">
+    <h3 style="color: green; text-align: center;">Formulaire</h3>
+    <div id="feed-container" style="display: flex; flex-direction: column; align-items: center;">
+        <!-- Les posts ajoutés apparaîtront ici -->
 
-        <div class="photo">
-            <img src="image/feuille.JPG" alt="feuille automne">
-            <h3 class="contenu">une feuille d'automne </h3>
-            <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet aut iusto laudantium natus et quos molestias nihil magni,
-                odio deserunt sunt, obcaecati eum enim! Atque ex consequatur placeat
-                fuga neque?</p>
-
-        </div>
-
-        <div class="photo1">
-            <img src="image/tunnel.JPG" alt="tunnel végétal">
-            <h3 class="contenu">tunnel végétal</h3>
-            <p class ="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet aut iusto laudantium natus et quos molestias nihil magni,
-                odio deserunt sunt, obcaecati eum enim! Atque ex consequatur placeat
-                fuga neque?</p>
-
-        </div>
-
-        <div class="photo2">
-            <img src="image/20230819_232312.jpg" alt="feu d'artifice">
-            <h3 class="contenu">feu d'artifice</h3>
-            <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet aut iusto laudantium natus et quos molestias nihil magni,
-                odio deserunt sunt, obcaecati eum enim! Atque ex consequatur placeat
-                fuga neque?</p>
-
-        </div>
-    </div>
-    </div>
-    <footer>
-        <p>création de sb </p>
-    </footer>
+        <!-- Formulaire pour ajouter un post -->
+        <form id="postForm" style="display: flex; flex-direction: column; width: 300px;text-align: center;">
+            <div><label for="postTitle">Titre du poste:</label>
+                <input type="text" id="postTitle" placeholder="Titre du post" required>
+            </div>
+            <label for="postContent">Contenu du poste:</label>
+            <textarea id="postContent" cols="40" rows="5" placeholder="Contenu du post" required></textarea>
+            <button type="submit">Ajouter</button>
+        </form>
+        </footer>
 
 </body>
 
-</html> -->
+</html>
