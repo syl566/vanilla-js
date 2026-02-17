@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <script src="form.js" defer></script>
+    <title>Portfolio</title>
 </head>
-<div>
-  <a href="index3.html">Home</a>
-</div>
 
-</div>
+<body>
+    <nav class="navbar" style="display: flex;justify-content: space-around;background-color: rgb(105, 126, 126)">
+        <div class="dropdown" style="position: relative; display: inline-block;">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index3.html">Home</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="formulaire .html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <h3 style="color: green; align-items:end;text-align:center;">Formulaire</h3>
+
+    <div id="feed-container" style="display: flex; flex-direction: column;">
+        <!-- Les posts ajoutés apparaîtront ici -->
+        <form id="postForm" style="display: flex; flex-direction: column;">
+            <label for="postTitle">Titre du poste:</label>
+            <input type="text" id="postTitle" placeholder="Titre du post" required>
+            <label for="postContent">Contenu</label>
+            <textarea id="postContent" cols="30" rows="3" placeholder="Contenu du post" required></textarea>
+            <button type="submit" style="width: 5vw;">Ajouter</button>
+        </form>
+    </div>
 </body>
 
 </html>

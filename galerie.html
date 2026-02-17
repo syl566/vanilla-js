@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <script src="galerie.js" defer></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav class="navbar" style="display: flex;justify-content: space-around;background-color: rgb(105, 126, 126);">
+        <div class="dropdown" style="position: relative; display: inline-block;">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index3.html">Home</a>
+                <a href="formulaire .html">Contact</a>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="setGrid()">Vue Galerie</button>
+            <button onclick="setColumn()">Vue Colonnes</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="gallery" id="gallery">
+
+            <img src="image/20230819_232312.jpg" class="active" />
+            <img src="image/feuille.JPG" class="active" />
+            <img src="image/tunnel.JPG" class="active" />
+            <img src="image/Image 1.png" class="active" />
+            <img src="image/images.jpeg" class="active" />
+            <img src="image/images1.jpeg" class="active" />
+            <img src="image/images2.jpeg" class="active" />
+            <img src="image/images4.jpeg" class="active" />
+            <img src="image/images5.jpeg" class="active" />
+        </div>
+    </div>
+</body>
+
+</html>

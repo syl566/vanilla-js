@@ -1,7 +1,9 @@
 let articles = [
   { id: 1, photo: "image/feuille.JPG", alt: "feuille d'automne", titre: "feuille d'automne", texte: "lorem" },
-  { id: 2, photo: "image/tunnel.JPG", alt: "tunnel", titre: "tunnel végétal", texte: "lorem" },
-  { id: 3, photo: "image/20230819_232312.jpg", alt: "feu d'artifice", titre: "feu d'artifice", texte: "lorem" }];
+  { id: 2, photo: "image/tunnel.JPG", alt: "tunnel", titre: "tunnel végétal", texte: "lorem" }, {
+    id: 3, photo: "image/20230819_232312.jpg", alt: "feu d'artifice", titre: "feu d'artifice", texte: "lorem"
+  }];
+
 
 function createdCard(article) {
   let div = document.createElement("div");
@@ -36,7 +38,7 @@ async function fetchArticles() {
   console.log(jokeapi);
 
 }
-
+//menu déroulant
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -54,34 +56,4 @@ window.onclick = function (event) {
     }
   }
 }
-
-
-
-let form = document.getElementById('postForm');
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Empêche le rechargement de la page
-
-  let PostTitle = getElemmentByld('postTitle').value;
-  let PostContent = getElementById('postContent').value;
-
-
-});
-
-// Récupérer les valeurs du formulaire
-const title = document.getElementById('postTitle').value;
-const content = document.getElementById('postContent').value;
-
-// Créer un nouvel élément post
-const post = document.createElement('div');
-post.className = 'post';
-post.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
-
-// Ajouter le post en haut du feed
-postDiv.appendChild(deleteBtn);
-document.getElementById("feed-container").appendChild(postDiv);
-
-// Réinitialiser le formulaire
-document.getElementById("postForm").reset();
-});
-
 

@@ -6,7 +6,6 @@
 }
 
 .navbar {
-
   display: flex;
   justify-content: flex-end;
   border-radius: 1%;
@@ -19,16 +18,10 @@ a {
   align-items: center;
 }
 
-label,
-button {
+label {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
   font-size: 1em;
-  border-radius: 8px;
-  color: black;
-  width: 7vw;
-  height: 4vh;
-  cursor: pointer;
 }
 
 .info {
@@ -69,6 +62,12 @@ img {
 }
 
 .photo,
+img:hover {
+  transition: 3ms;
+  transform: scale(1.2);
+}
+
+.photo,
 .photo1,
 .photo2 {
   display: flex;
@@ -91,17 +90,9 @@ img {
 
 }
 
-.dropbtn {
-  background-color: #beced8;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
 .dropbtn:hover,
 .dropbtn:focus {
+
   background-color: #2980B9;
 }
 
@@ -137,21 +128,29 @@ img {
 
 /* Style du formulaire */
 #postForm {
-  margin-bottom: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
+
 
 #postForm input[type="text"],
 #postForm textarea {
-  width: 100%;
+  width: 50%;
   padding: 8px;
   margin: 5px 0;
   box-sizing: border-box;
 }
 
 #postForm button {
-  padding: 8px 16px;
+  padding: 8px 4px;
   background-color: #4CAF50;
-  color: white;
+  color: bisque;
   border: none;
   cursor: pointer;
 }
@@ -162,15 +161,20 @@ img {
 
 /* Style du feed */
 #feed-container {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  margin: 0;
 }
 
+
 .post {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
+  background-color: bisque;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .post h3 {
@@ -179,4 +183,40 @@ img {
 
 .post p {
   margin: 0;
+}
+
+.post-content {
+  width: 5vw;
+  height: 5vh;
+  border-radius: 8px;
+
+
+}
+
+.container {
+  display: flex;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  margin: 10vw;
+  margin-top: 3vw;
+  gap: 1vw;
+}
+
+.gallery img {
+  width: 20vw;
+  height: 30vh;
+  cursor: pointer;
+  object-fit: cover;
 }
