@@ -1,24 +1,82 @@
-let galeries = [
-    { id: 1, photo: "image/image (2).png", alt: "" },
-    { id: 2, photo: "image/20230819_232312.jpg", alt: "" },
-    { id: 3, photo: "image/feuille.JPG", alt: "" },
-    { id: 4, photo: "image/Image 1.png", alt: "" },
-    { id: 5, photo: "image/images.jpeg", alt: "" },
-    { id: 6, photo: "image/images1.jpeg", alt: "" },
-    { id: 7, photo: "image/images2.jpeg", alt: "" },
-    { id: 8, photo: "image/images4.jpeg", alt: "" },
-    { id: 9, photo: "image/images5.jpeg", alt: "" },
-    { id: 10, photo: "image/tunnel.JPG", alt: "" }
-];
+let images = [
+    {
+        id: 1, img: "image/20230819_232312.jpg", class: "active"
+    },
+    {
+        id: 2, img: "image/feuille.JPG", class: "active"
+    },
+    {
+        id: 3, img: "image/tunnel.JPG", class: "active"
+    },
+    {
+        id: 4, img: "image/Image 1.png", class: "active"
+    },
+    {
+        id: 5, img: "image/images.jpeg", class: "active"
+    },
+    {
+        id: 6, img: "image/images1.jpeg", class: "active"
+    },
+    {
+        id: 7, img: "image/images2.jpeg", class: "active"
+    },
+    {
+        id: 8, img: "image/images4.jpeg", class: "active"
+    },
+    { id: 9, img: "image/images5.jpeg", class: "active" }
 
-//const images = [{ width: 200 }, { width: 300 }, { width: 150 }];
+]
+
+function createdCard(image) {
+    let div = document.createElement("div");
+    div.classList.add("card");
+
+    let img = document.createElement("img");
+    img.src = image.img;
+
+    let btn = document.createElement("button");
+    btn.textContent = "Supprimer";
+    btn.addEventListener("click", function () {
+        div.remove(); // supprime la carte entière (l'image + le bouton)
+    });
+
+    div.appendChild(img);
+    gallery.appendChild(div);
+    div.appendChild(btn);
+
+}
+window.addEventListener('load', function () {
+    images.forEach((image) => {
+        createdCard(image);
+    });
+});
+
+function setGrid() {
+    gallery.classList.remove("column");
+    gallery.classList.add("grid");
+}
+
+function setColumn() {
+    gallery.classList.remove("grid");
+    gallery.classList.add("column");
+}
+
+function GFG_Fun() {
+    const img = document.createElement("img");
+    img.src = 'https://picsum.photos/200/300';
+    gallery.appendChild(img);
+}
+
+function GFG_Out() {
+    gallery.innerHTML = "";
+}
 
 //menu déroulant
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-//Fermer le menu déroulant si l'utilisateur clique en dehors de celui-ci.
+//Ferme le menu déroulant si je clique en dehors de celui-ci.
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -32,14 +90,4 @@ window.onclick = function (event) {
     }
 }
 
-const gallery = document.getElementById("gallery");
 
-function setGrid() {
-    gallery.classList.remove("column");
-    gallery.classList.add("grid");
-}
-
-function setColumn() {
-    gallery.classList.remove("grid");
-    gallery.classList.add("column");
-}

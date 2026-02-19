@@ -15,28 +15,21 @@
             <button onclick="myFunction()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="index3.html">Home</a>
-                <a href="formulaire .html">Contact</a>
+                <a href="formulaire.html">Contact</a>
             </div>
         </div>
-        <div class="buttons">
+        <div style="display: flex; gap: 10px;">
             <button onclick="setGrid()">Vue Galerie</button>
             <button onclick="setColumn()">Vue Colonnes</button>
         </div>
     </nav>
-    <div class="container">
-        <div class="gallery" id="gallery">
+    <div id="gallery" class="gallery"></div>
+    <button onclick="GFG_Out()" style="width: 70px;height: 20px;">Supprimer</button>
 
-            <img src="image/20230819_232312.jpg" class="active" />
-            <img src="image/feuille.JPG" class="active" />
-            <img src="image/tunnel.JPG" class="active" />
-            <img src="image/Image 1.png" class="active" />
-            <img src="image/images.jpeg" class="active" />
-            <img src="image/images1.jpeg" class="active" />
-            <img src="image/images2.jpeg" class="active" />
-            <img src="image/images4.jpeg" class="active" />
-            <img src="image/images5.jpeg" class="active" />
-        </div>
-    </div>
+    <label for="url">Enter URL:</label>
+    <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required />
+    <button onclick="GFG_Fun()">Ajouter</button>
+
 </body>
 
 </html>

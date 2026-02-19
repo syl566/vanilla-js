@@ -16,13 +16,7 @@ window.onclick = function (event) {
         }
     }
 }
-async function fetchArticles() {
 
-    const reponse = await fetch("https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10");
-    const jokeapi = await reponse.json();
-    console.log(jokeapi);
-
-}
 // le formulaire doit être dans le document pour le soumettre
 const form = document.getElementById("postForm");
 form.addEventListener("submit", function (event) {

@@ -2,7 +2,8 @@
 
 * {
   background-color: bisque;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .navbar {
@@ -19,6 +20,7 @@ a {
 }
 
 label {
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
   color: red;
   font-size: 1em;
@@ -64,7 +66,7 @@ img {
 .photo,
 img:hover {
   transition: 3ms;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .photo,
@@ -72,22 +74,11 @@ img:hover {
 .photo2 {
   display: flex;
   flex-wrap: wrap;
-
-}
-
-.titre {
-  font-size: 1.5em;
-  margin-left: 4vw;
-
-  display: flex;
-  align-items: center;
-
 }
 
 .texte {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-
 }
 
 .dropbtn:hover,
@@ -137,7 +128,6 @@ img:hover {
   border: 1px solid #ccc;
   border-radius: 10px;
 }
-
 
 #postForm input[type="text"],
 #postForm textarea {
@@ -189,34 +179,18 @@ img:hover {
   width: 5vw;
   height: 5vh;
   border-radius: 8px;
-
-
 }
 
-.container {
-  display: flex;
-
-}
-
-.grid {
+.gallery.grid {
+  max-width: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 370px);
+  gap: 10px;
 }
 
-.column {
+.gallery.column {
   display: flex;
   flex-direction: column;
-}
-
-.gallery {
-  margin: 10vw;
-  margin-top: 3vw;
-  gap: 1vw;
-}
-
-.gallery img {
-  width: 20vw;
-  height: 30vh;
-  cursor: pointer;
-  object-fit: cover;
+  gap: 10px;
 }
